@@ -139,4 +139,4 @@ def on_leave(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, port=5000, debug=True)
+    socketio.run(app, port=os.getenv("PORT", default=5000), debug=True)
