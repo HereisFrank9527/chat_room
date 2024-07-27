@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from flask_socketio import SocketIO, join_room, leave_room
 import sqlite3
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'jjj'
