@@ -13,6 +13,19 @@
 </head>
 
 <body>
+<script>
+    Notification.requestPermission().then(function(result) {
+        if (result === 'denied') {
+            console.log('拒绝显示系统通知');
+            return;
+        }
+        if (result === 'default') {
+            console.log('默认');
+            return;
+        }
+        console.log('允许显示系统通知')
+    });
+</script>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="/static/jquery-2.1.1.min.js"></script>
 <script src="/static/materialize.min.js"></script>
